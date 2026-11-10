@@ -1,10 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-product-mode="light">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#211a13" />
+    <script>
+      try {
+        var productImageMode = localStorage.getItem('product-image-mode')
+        document.documentElement.dataset.productMode =
+          productImageMode === 'dark' ? 'dark' : 'light'
+      } catch (error) {
+        document.documentElement.dataset.productMode = 'light'
+      }
+    </script>
     <meta
       name="description"
       content="Lamp and Glow — handcrafted wooden lamps and sculptural lighting, made for the hour after sunset."
