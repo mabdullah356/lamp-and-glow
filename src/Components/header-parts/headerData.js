@@ -15,7 +15,7 @@ export const ANNOUNCEMENT_KEY = 'lamp-and-glow:announcement-dismissed'
 export const NAV_LINKS = [
   { label: 'Shop', path: '/collections', mega: true },
   { label: 'Collections', path: '/collections', search: 'view=collections' },
-  { label: 'Signature', path: '/collections', search: 'view=signature' },
+  { label: 'Signature', path: '/signature' },
   { label: 'Contact', path: '/', hash: 'contact' },
 ]
 

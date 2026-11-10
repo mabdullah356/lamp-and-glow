@@ -148,7 +148,7 @@ const DesktopNav = ({ shopOpen, onShopEnter, onShopClick, onNavigate }) => {
 
               <motion.div variants={panelItem}>
                 <Link
-                  to="/collections?view=signature"
+                  to="/signature"
                   onClick={onNavigate}
                   className="group relative flex min-h-[280px] overflow-hidden rounded-3xl bg-espresso lg:min-h-[300px]"
                 >

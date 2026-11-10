@@ -1,18 +1,7 @@
 import { Link } from 'react-router-dom'
 import { ArrowUpRight } from 'lucide-react'
 import ProductImage from './ProductImage'
-
-const formatPrice = (price, currency) => {
-  try {
-    return new Intl.NumberFormat('en-PK', {
-      style: 'currency',
-      currency,
-      maximumFractionDigits: 0,
-    }).format(price)
-  } catch {
-    return `${currency} ${price.toLocaleString('en-PK')}`
-  }
-}
+import formatPrice from '../../utils/formatPrice'
 
 const ProductCard = ({ product, priority = false }) => (
   <Link
