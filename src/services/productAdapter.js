@@ -11,6 +11,20 @@ const toImage = (image, fallbackAlt) => {
   }
 }
 
+const toDetails = (details) => {
+  if (!Array.isArray(details)) return []
+
+  return details
+    .filter(
+      (row) =>
+        Array.isArray(row) &&
+        row.length >= 2 &&
+        String(row[0]).trim() &&
+        String(row[1]).trim(),
+    )
+    .map(([label, value]) => [String(label), String(value)])
+}
+
 export const adaptProduct = (raw) => {
   if (!raw || raw.id === undefined || raw.id === null) return null
 
@@ -36,6 +50,10 @@ export const adaptProduct = (raw) => {
     currency: raw.currency || 'USD',
     category: raw.category || 'Lighting',
     images: { light, dark },
+    description: Array.isArray(raw.description)
+      ? raw.description.filter((paragraph) => typeof paragraph === 'string')
+      : [],
+    details: toDetails(raw.details),
   }
 }
 
