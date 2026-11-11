@@ -16,7 +16,7 @@ export const NAV_LINKS = [
   { label: 'Shop', path: '/collections', mega: true },
   { label: 'Collections', path: '/collections', search: 'view=collections' },
   { label: 'Signature', path: '/signature' },
-  { label: 'Contact', path: '/', hash: 'contact' },
+  { label: 'Contact', path: '/contact' },
 ]
 
 export const SHOP_CATEGORIES = [

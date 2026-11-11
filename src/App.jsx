@@ -4,6 +4,7 @@ import Home from './Components/Pages/Home'
 import Collections from './Components/Pages/Collections'
 import ProductPage from './Components/Pages/ProductPage'
 import Signature from './Components/Pages/Signature'
+import Contact from './Components/Pages/Contact'
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
@@ -17,6 +18,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/collections' element={<Collections />} />
           <Route path='/signature' element={<Signature />} />
+          <Route path='/contact' element={<Contact />} />
           <Route path='/product/:id' element={<ProductPage />} />
         </Routes>
 

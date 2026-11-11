@@ -38,7 +38,7 @@ const COMPANY_LINKS = [
 ]
 
 const HELP_LINKS = [
-  { label: 'Contact us', to: '/#contact' },
+  { label: 'Contact us', to: '/contact' },
   { label: 'Shipping & delivery', to: '/collections?view=shipping' },
   { label: 'Returns & exchanges', to: '/collections?view=returns' },
   { label: 'Product care', to: '/collections?view=care' },
